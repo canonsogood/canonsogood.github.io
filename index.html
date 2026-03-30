@@ -203,8 +203,8 @@ footer p { font-size: 11px; color: var(--ink-muted); letter-spacing: 0.05em; }
   <span class="nav-name" onclick="goHome()" id="site-name">攝影作品集</span>
   <ul class="nav-links">
     <li><a onclick="goHome()">作品</a></li>
-    <li><a onclick="scrollTo('about-section')">關於</a></li>
-    <li><a onclick="scrollTo('contact-section')">聯繫</a></li>
+    <li><a onclick="scrollToSection('about-section')">關於</a></li>
+    <li><a onclick="scrollToSection('contact-section')">聯繫</a></li>
   </ul>
 </nav>
 
@@ -489,7 +489,7 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowRight') lbStep(1);
 });
 
-function scrollTo(id) {
+function scrollToSection(id) {
   goHome();
   setTimeout(() => $(id)?.scrollIntoView({ behavior: 'smooth' }), 60);
 }
