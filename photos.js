@@ -53,7 +53,7 @@ window.PHOTOS_DATA = [
         id:    "2026-01-01-jingru",   // 資料夾名稱
         name:  "靜茹",                // 顯示名稱
         date:  "2026.01.01",          // 日期（選填，留空 "" 則不顯示）
-        cover: "DSC_0001.png",        // 封面照片檔名（留空 "" 則自動用第一張）
+        cover: "DSC_0001.jpg",        // 封面照片檔名（留空 "" 則自動用第一張）
 
         photos: [
           { file: "DSC_0001.jpg" },
