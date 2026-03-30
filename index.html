@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>攝影作品集</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400&family=Noto+Sans+TC:wght@300;400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400&family=Noto+Sans+TC:wght@300;400&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
@@ -16,7 +16,7 @@
   --paper-warm: #ede9e2;
   --line: rgba(26,25,22,0.1);
   --accent: #c4a882;
-  --serif: 'DM Serif Display', 'Noto Serif TC', serif;
+  --serif: 'Cormorant Garamond', 'Noto Serif TC', serif;
   --sans: 'Noto Sans TC', sans-serif;
   --gap: clamp(20px, 4vw, 48px);
 }
@@ -59,7 +59,7 @@ nav {
   max-width: 1100px; margin: 0 auto;
   display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: end;
 }
-.home-hero h1 { font-family: var(--serif); font-size: clamp(40px, 6vw, 72px); font-weight: 400; line-height: 1.1; margin-bottom: 20px; }
+.home-hero h1 { font-family: var(--serif); font-size: clamp(44px, 7vw, 82px); font-weight: 500; line-height: 1.1; margin-bottom: 20px; font-style: italic; }
 .home-hero h1 em { font-style: italic; color: var(--ink-soft); }
 .home-hero p { font-size: 13px; color: var(--ink-soft); max-width: 320px; letter-spacing: 0.02em; }
 .hero-num { text-align: right; }
@@ -92,7 +92,7 @@ nav {
 .album-grid {
   max-width: 1100px; margin: 0 auto;
   padding: 36px var(--gap) 80px;
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 24px;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 24px;
 }
 .album-card { cursor: pointer; }
 .album-thumb { position: relative; overflow: hidden; aspect-ratio: 3/2; background: var(--paper-warm); border-radius: 1px; }
@@ -444,9 +444,9 @@ function renderPhotoGrid() {
     el.style.animationDelay = (i * 0.03) + 's';
     el.innerHTML = `
       <img src="${photo.src}" alt="${photo.file}" loading="lazy">
-      <div class="photo-hover-label">${photo.file}</div>
+
       <div class="photo-caption">
-        <span>${photo.file}</span>
+        <span></span>
         <span>${i + 1} / ${lbPhotos.length}</span>
       </div>`;
     el.addEventListener('click', () => openLb(i));
@@ -473,7 +473,7 @@ function openLb(idx) {
 function renderLb() {
   const p = lbPhotos[lbIdx];
   $('lb-img').src = p.src;
-  $('lb-file').textContent = p.file;
+  $('lb-file').textContent = '';
   $('lb-counter').textContent = (lbIdx + 1) + ' / ' + lbPhotos.length;
 }
 function lbStep(dir) {
