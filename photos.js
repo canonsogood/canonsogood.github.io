@@ -18,7 +18,7 @@
 window.SITE_CONFIG = {
   name: "山本攝影",                        // 左上角名稱 & 頁籤標題
 
-  heroTitle: "<em>Portrait</em> &<br>Wedding</em>",  // 首頁大標題（可用 <br> 換行、<em> 斜體）
+  heroTitle: "Portrait &<br>Wedding</em>",  // 首頁大標題（可用 <br> 換行、<em> 斜體）
   heroDesc:  "業餘攝影師，記錄婚禮與人像的溫度。\n每個瞬間都值得被好好保留。",
 
   about: {
