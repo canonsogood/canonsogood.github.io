@@ -44,7 +44,7 @@ window.PHOTOS_DATA = [
   /* ====== 分類 1：婚禮紀實 ====== */
   {
     id:   "wedding",       // 資料夾名稱，只能用英文/數字/橫線
-    name: "婚禮紀實",      // 顯示名稱
+    name: "Wedding",      // 顯示名稱
 
     albums: [
 
