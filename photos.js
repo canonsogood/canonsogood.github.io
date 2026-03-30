@@ -30,8 +30,8 @@ window.SITE_CONFIG = {
   },
 
   contact: [
-    { label: "Email", value: "hello@example.com" },
-    { label: "IG",    value: "@yourhandle" },
+    { label: "Email", value: "canonsogood@gmail.com" },
+    { label: "IG",    value: "canonsogood" },
     { label: "合作",  value: "歡迎來信洽談婚禮攝影" }
   ]
 };
