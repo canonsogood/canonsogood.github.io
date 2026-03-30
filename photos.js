@@ -5,8 +5,8 @@
  * ╚══════════════════════════════════════════════════════════════╝
  *
  * 照片放在這裡：
- *   photos/<分類id>/<攝影集id>/DSC_0001.jpg
- *                              DSC_0002.jpg
+ *   photos/<分類id>/<攝影集id>/IMG_0001.jpg
+ *                              IMG_0002.jpg
  *                              ...
  *
  * 照片會依照檔名自動排序（數字排序）。
@@ -53,14 +53,14 @@ window.PHOTOS_DATA = [
         id:    "rin",
         name:  "Rin",
         date:  "",
-        cover: "DSC_0001.jpg",
+        cover: "IMG_0001.jpg",
 
         photos: [
-          { file: "DSC_0001.jpg" },
-          { file: "DSC_0002.jpg" },
-          { file: "DSC_0003.jpg" },
-          { file: "DSC_0004.jpg" },
-          { file: "DSC_0005.jpg" },
+          { file: "IMG_0001.jpg" },
+          { file: "IMG_0002.jpg" },
+          { file: "IMG_0003.jpg" },
+          { file: "IMG_0004.jpg" },
+          { file: "IMG_0005.jpg" },
         ]
       },
 
@@ -69,12 +69,12 @@ window.PHOTOS_DATA = [
         id:    "xiao-hui",
         name:  "小惠",
         date:  "",
-        cover: "DSC_0001.jpg",
+        cover: "IMG_0001.jpg",
 
         photos: [
-          { file: "DSC_0001.jpg" },
-          { file: "DSC_0002.jpg" },
-          { file: "DSC_0003.jpg" },
+          { file: "IMG_0001.jpg" },
+          { file: "IMG_0002.jpg" },
+          { file: "IMG_0003.jpg" },
         ]
       },
 
@@ -93,14 +93,14 @@ window.PHOTOS_DATA = [
         id:    "2026-01-01-jingru",   // 資料夾名稱
         name:  "靜茹",                // 顯示名稱
         date:  "2026.01.01",          // 日期（選填，留空 "" 則不顯示）
-        cover: "DSC_0001.jpg",        // 封面照片檔名（留空 "" 則自動用第一張）
+        cover: "IMG_0001.jpg",        // 封面照片檔名（留空 "" 則自動用第一張）
 
         photos: [
-          { file: "DSC_0001.jpg" },
-          { file: "DSC_0002.jpg" },
-          { file: "DSC_0003.jpg" },
-          { file: "DSC_0004.jpg" },
-          { file: "DSC_0005.jpg" },
+          { file: "IMG_0001.jpg" },
+          { file: "IMG_0002.jpg" },
+          { file: "IMG_0003.jpg" },
+          { file: "IMG_0004.jpg" },
+          { file: "IMG_0005.jpg" },
           // 新增照片：複製上面一行，改檔名就好
         ]
       },
@@ -110,13 +110,13 @@ window.PHOTOS_DATA = [
         id:    "2026-02-02-yihan",
         name:  "意涵",
         date:  "2026.02.02",
-        cover: "DSC_0002.jpg",
+        cover: "IMG_0002.jpg",
 
         photos: [
-          { file: "DSC_0001.jpg" },
-          { file: "DSC_0002.jpg" },
-          { file: "DSC_0003.jpg" },
-          { file: "DSC_0004.jpg" },
+          { file: "IMG_0001.jpg" },
+          { file: "IMG_0002.jpg" },
+          { file: "IMG_0003.jpg" },
+          { file: "IMG_0004.jpg" },
         ]
       },
 
@@ -125,12 +125,12 @@ window.PHOTOS_DATA = [
         id:    "2026-03-03-yuxi",
         name:  "與西",
         date:  "2026.03.03",
-        cover: "DSC_0001.jpg",
+        cover: "IMG_0001.jpg",
 
         photos: [
-          { file: "DSC_0001.jpg" },
-          { file: "DSC_0002.jpg" },
-          { file: "DSC_0003.jpg" },
+          { file: "IMG_0001.jpg" },
+          { file: "IMG_0002.jpg" },
+          { file: "IMG_0003.jpg" },
         ]
       },
 
@@ -140,11 +140,11 @@ window.PHOTOS_DATA = [
         id:    "2026-04-04-mingzhi",   // 改這裡（英文）
         name:  "明志",                  // 改這裡（顯示名稱）
         date:  "2026.04.04",            // 改這裡
-        cover: "DSC_0001.jpg",          // 改這裡
+        cover: "IMG_0001.jpg",          // 改這裡
 
         photos: [
-          { file: "DSC_0001.jpg" },
-          { file: "DSC_0002.jpg" },
+          { file: "IMG_0001.jpg" },
+          { file: "IMG_0002.jpg" },
         ]
       },
       */
@@ -164,9 +164,9 @@ window.PHOTOS_DATA = [
         id:    "alishan-2026",
         name:  "阿里山",
         date:  "2026.05.01",
-        cover: "DSC_0001.jpg",
+        cover: "IMG_0001.jpg",
         photos: [
-          { file: "DSC_0001.jpg" },
+          { file: "IMG_0001.jpg" },
         ]
       },
     ]
