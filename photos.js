@@ -115,16 +115,16 @@ window.PHOTOS_DATA = [
   /* ====== 分類 2：人像攝影 ====== */
   {
     id:   "portrait",
-    name: "人像攝影",
+    name: "Portrait",
 
     albums: [
 
-      /* ── 攝影集：小安 ── */
+      /* ── 攝影集：Rin ── */
       {
-        id:    "xiao-an",
-        name:  "小安",
+        id:    "Rin",
+        name:  "Rin",
         date:  "",
-        cover: "DSC_0002.jpg",
+        cover: "DSC_0001.jpg",
 
         photos: [
           { file: "DSC_0001.jpg" },
