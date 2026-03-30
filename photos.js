@@ -121,7 +121,7 @@ window.PHOTOS_DATA = [
 
       /* ── 攝影集：Rin ── */
       {
-        id:    "Rin",
+        id:    "rin",
         name:  "Rin",
         date:  "",
         cover: "DSC_0001.jpg",
