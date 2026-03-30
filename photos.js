@@ -41,7 +41,47 @@ window.SITE_CONFIG = {
    ────────────────────────────────────────── */
 window.PHOTOS_DATA = [
 
-  /* ====== 分類 1：婚禮紀實 ====== */
+  /* ====== 分類 1：人像攝影 ====== */
+  {
+    id:   "portrait",
+    name: "Portrait",
+
+    albums: [
+
+      /* ── 攝影集：Rin ── */
+      {
+        id:    "rin",
+        name:  "Rin",
+        date:  "",
+        cover: "DSC_0001.jpg",
+
+        photos: [
+          { file: "DSC_0001.jpg" },
+          { file: "DSC_0002.jpg" },
+          { file: "DSC_0003.jpg" },
+          { file: "DSC_0004.jpg" },
+          { file: "DSC_0005.jpg" },
+        ]
+      },
+
+      /* ── 攝影集：小惠 ── */
+      {
+        id:    "xiao-hui",
+        name:  "小惠",
+        date:  "",
+        cover: "DSC_0001.jpg",
+
+        photos: [
+          { file: "DSC_0001.jpg" },
+          { file: "DSC_0002.jpg" },
+          { file: "DSC_0003.jpg" },
+        ]
+      },
+
+    ]
+  },
+
+     /* ====== 分類 2：婚禮紀實 ====== */
   {
     id:   "wedding",       // 資料夾名稱，只能用英文/數字/橫線
     name: "Wedding",      // 顯示名稱
@@ -111,46 +151,7 @@ window.PHOTOS_DATA = [
 
     ]
   },
-
-  /* ====== 分類 2：人像攝影 ====== */
-  {
-    id:   "portrait",
-    name: "Portrait",
-
-    albums: [
-
-      /* ── 攝影集：Rin ── */
-      {
-        id:    "rin",
-        name:  "Rin",
-        date:  "",
-        cover: "DSC_0001.jpg",
-
-        photos: [
-          { file: "DSC_0001.jpg" },
-          { file: "DSC_0002.jpg" },
-          { file: "DSC_0003.jpg" },
-          { file: "DSC_0004.jpg" },
-          { file: "DSC_0005.jpg" },
-        ]
-      },
-
-      /* ── 攝影集：小惠 ── */
-      {
-        id:    "xiao-hui",
-        name:  "小惠",
-        date:  "",
-        cover: "DSC_0001.jpg",
-
-        photos: [
-          { file: "DSC_0001.jpg" },
-          { file: "DSC_0002.jpg" },
-          { file: "DSC_0003.jpg" },
-        ]
-      },
-
-    ]
-  },
+   
 
   /* ====== 新增分類範例（複製這個區塊）====== */
   /*
