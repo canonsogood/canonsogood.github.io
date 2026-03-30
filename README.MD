@@ -22,7 +22,7 @@
 4. 捲到最下面，點「Commit changes」
 
 ### 步驟 4：等待上線
-- 通常 1～3 分鐘後，打開 `https://yourname.github.io` 就可以看到網站
+- 通常 1～3 分鐘後，打開 `https://canonsogood.github.io` 就可以看到網站
 
 ---
 
