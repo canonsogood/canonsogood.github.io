@@ -92,7 +92,7 @@ nav {
 .album-grid {
   max-width: 1100px; margin: 0 auto;
   padding: 36px var(--gap) 80px;
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 24px;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 24px;
 }
 .album-card { cursor: pointer; }
 .album-thumb { position: relative; overflow: hidden; aspect-ratio: 3/2; background: var(--paper-warm); border-radius: 1px; }
@@ -355,9 +355,31 @@ function setBreadcrumb(catName, albumName) {
   $('bc-album').textContent = albumName || '';
 }
 
+/* HASH ROUTING */
+function setHash(catId, albumId) {
+  const hash = catId ? (albumId ? '#' + catId + '/' + albumId : '#' + catId) : '#';
+  history.replaceState(null, '', hash);
+}
+
+function readHash() {
+  const h = location.hash.replace('#', '');
+  if (!h) return;
+  const parts = h.split('/');
+  const cat = DATA.find(c => c.id === parts[0]);
+  if (!cat) return;
+  curCat = cat;
+  curCat.albums.forEach(a => a._catId = curCat.id);
+  if (parts[1]) {
+    const album = cat.albums.find(a => a.id === parts[1]);
+    if (album) { openAlbum(album.id); return; }
+  }
+  openCat(parts[0]);
+}
+
 /* HOME */
 function goHome() {
   curCat = null; curAlbum = null;
+  setHash(null);
   setBreadcrumb(null);
   renderHome();
   showPage('page-home');
@@ -394,6 +416,7 @@ function openCat(catId) {
   if (!curCat) return;
   curCat.albums.forEach(a => a._catId = curCat.id);
   curAlbum = null;
+  setHash(curCat.id);
   setBreadcrumb(curCat.name, null);
   $('cat-title').textContent = curCat.name;
   $('cat-meta').textContent = curCat.albums.length + ' 個攝影集';
@@ -424,6 +447,7 @@ function openAlbum(albumId) {
   curAlbum = curCat.albums.find(a => a.id === albumId);
   if (!curAlbum) return;
   setBreadcrumb(curCat.name, curAlbum.name);
+  setHash(curCat.id, curAlbum.id);
   $('album-title').textContent = curAlbum.name;
   $('album-meta').innerHTML = `${curCat.name}<br>${curAlbum.photos.length} 張`;
   lbPhotos = sortPhotos(curAlbum.photos).map(p => ({
@@ -495,6 +519,7 @@ function scrollToSection(id) {
 }
 
 renderHome();
+readHash();
 </script>
 </body>
 </html>
