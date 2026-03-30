@@ -32,7 +32,7 @@ window.SITE_CONFIG = {
   contact: [
     { label: "Email", value: "canonsogood@gmail.com" },
     { label: "IG",    value: "canonsogood" },
-    { label: "合作",  value: "歡迎來信洽談婚禮攝影" }
+    { label: "合作",  value: "歡迎來信或IG私訊洽談合作事宜" }
   ]
 };
 
