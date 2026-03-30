@@ -53,7 +53,7 @@ window.PHOTOS_DATA = [
            id:    "rin",
            name:  "Rin",
            date:  "",
-           cover: "IMG_0001.jpg",
+           cover: "IMG_0141.jpg",
    
            photos: [
              { file: "IMG_0001.jpg" },
