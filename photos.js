@@ -154,7 +154,7 @@ window.PHOTOS_DATA = [
         id:    "ke-cing",
         name:  "可晴",
         date:  "",
-        cover: "IMG_0012.jpg",
+        cover: "IMG_0038.jpg",
 
         photos: [
              { file: "IMG_0001.jpg" },
