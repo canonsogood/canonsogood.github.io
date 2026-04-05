@@ -54,6 +54,7 @@ nav {
 .page.active { display: block; }
 .page.has-bc { padding-top: 97px; }
 
+/* HOME */
 .home-hero {
   padding: 80px var(--gap) 56px;
   max-width: 1100px; margin: 0 auto;
@@ -66,32 +67,27 @@ nav {
 .hero-num .big { font-family: var(--serif); font-size: 80px; line-height: 1; color: var(--paper-warm); -webkit-text-stroke: 1px var(--ink-muted); display: block; }
 .hero-num small { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-muted); margin-top: 6px; display: block; }
 
-.cat-section { max-width: 1100px; margin: 0 auto; padding: 0 var(--gap) 80px; }
-.section-rule { border: none; border-top: 1px solid var(--line); margin-bottom: 40px; }
-.cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); gap: 2px; }
-.cat-card { position: relative; overflow: hidden; cursor: pointer; aspect-ratio: 4/3; background: var(--paper-warm); }
-.cat-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94); }
-.cat-card:hover img { transform: scale(1.05); }
-.cat-card-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(26,25,22,0.72) 0%, rgba(26,25,22,0.1) 55%, transparent 100%);
-  display: flex; flex-direction: column; justify-content: flex-end; padding: 24px;
-}
-.cat-card-name { font-family: var(--serif); font-size: 22px; color: #f7f5f1; font-weight: 400; line-height: 1.2; }
-.cat-card-count { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(247,245,241,0.55); margin-top: 4px; }
+.home-section { max-width: 1100px; margin: 0 auto; padding: 0 var(--gap) 80px; }
+.section-rule { border: none; border-top: 1px solid var(--line); margin-bottom: 0; }
 
-.page-header {
-  max-width: 1100px; margin: 0 auto;
-  padding: 56px var(--gap) 36px;
+/* FILTER */
+.filter-wrap {
+  padding: 20px 0 28px;
+  display: flex; gap: 8px; flex-wrap: wrap;
   border-bottom: 1px solid var(--line);
-  display: flex; justify-content: space-between; align-items: flex-end;
 }
-.page-header h2 { font-family: var(--serif); font-size: clamp(26px, 4vw, 44px); font-weight: 400; }
-.page-header .meta { font-size: 11px; letter-spacing: 0.1em; color: var(--ink-muted); text-align: right; }
+.filter-btn {
+  padding: 7px 16px; border: 1px solid var(--line); border-radius: 2px;
+  background: transparent; font-family: var(--sans); font-size: 11px; font-weight: 300;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft);
+  cursor: pointer; transition: all 0.18s;
+}
+.filter-btn:hover { border-color: var(--ink-soft); color: var(--ink); }
+.filter-btn.active { background: var(--ink); border-color: var(--ink); color: var(--paper); }
 
+/* ALBUM GRID */
 .album-grid {
-  max-width: 1100px; margin: 0 auto;
-  padding: 36px var(--gap) 80px;
+  padding-top: 36px;
   display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 24px;
 }
 .album-card { cursor: pointer; }
@@ -101,6 +97,17 @@ nav {
 .album-info { padding: 12px 0 0; }
 .album-title { font-family: var(--serif); font-size: 17px; font-weight: 400; color: var(--ink); }
 .album-sub { font-size: 11px; letter-spacing: 0.07em; color: var(--ink-muted); margin-top: 2px; }
+.album-tag { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted); margin-top: 3px; display: block; }
+
+/* ALBUM PAGE */
+.page-header {
+  max-width: 1100px; margin: 0 auto;
+  padding: 56px var(--gap) 36px;
+  border-bottom: 1px solid var(--line);
+  display: flex; justify-content: space-between; align-items: flex-end;
+}
+.page-header h2 { font-family: var(--serif); font-size: clamp(26px, 4vw, 44px); font-weight: 400; }
+.page-header .meta { font-size: 11px; letter-spacing: 0.1em; color: var(--ink-muted); text-align: right; }
 
 .album-toolbar {
   max-width: 1100px; margin: 0 auto;
@@ -120,7 +127,6 @@ nav {
 .photo-grid { max-width: 1400px; margin: 0 auto; padding: 16px var(--gap) 80px; }
 .photo-grid.cols-3 { columns: 3; column-gap: 10px; }
 .photo-grid.cols-1 { columns: 1; }
-
 .photo-item {
   break-inside: avoid; margin-bottom: 10px;
   cursor: pointer; position: relative; overflow: hidden; border-radius: 1px;
@@ -130,16 +136,8 @@ nav {
 .photo-item:hover img { transform: scale(1.02); }
 .photo-grid.cols-1 .photo-caption { display: flex; justify-content: space-between; padding: 8px 0 0; font-size: 11px; letter-spacing: 0.07em; color: var(--ink-muted); }
 .photo-grid.cols-3 .photo-caption { display: none; }
-.photo-hover-label {
-  position: absolute; bottom: 0; left: 0; right: 0;
-  padding: 8px 10px;
-  background: linear-gradient(to top, rgba(26,25,22,0.5), transparent);
-  font-size: 10px; letter-spacing: 0.08em; color: rgba(247,245,241,0.75);
-  opacity: 0; transition: opacity 0.22s;
-}
-.photo-item:hover .photo-hover-label { opacity: 1; }
-.photo-grid.cols-1 .photo-hover-label { display: none; }
 
+/* ABOUT / CONTACT */
 .bottom-sections { max-width: 1100px; margin: 0 auto; }
 .bottom-section {
   padding: 64px var(--gap); border-top: 1px solid var(--line);
@@ -155,6 +153,7 @@ nav {
 footer { border-top: 1px solid var(--line); padding: 28px var(--gap); max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; }
 footer p { font-size: 11px; color: var(--ink-muted); letter-spacing: 0.05em; }
 
+/* LIGHTBOX */
 .lightbox {
   position: fixed; inset: 0; z-index: 200;
   background: rgba(18,17,16,0.95);
@@ -192,7 +191,7 @@ footer p { font-size: 11px; color: var(--ink-muted); letter-spacing: 0.05em; }
   .bottom-section { grid-template-columns: 1fr; gap: 16px; }
 }
 @media (max-width: 480px) {
-  .cat-grid { grid-template-columns: 1fr; }
+  .album-grid { grid-template-columns: 1fr; }
   .photo-grid.cols-3 { columns: 2; }
 }
 </style>
@@ -211,8 +210,6 @@ footer p { font-size: 11px; color: var(--ink-muted); letter-spacing: 0.05em; }
 <div class="breadcrumb hidden" id="breadcrumb">
   <span class="bc-link" onclick="goHome()">首頁</span>
   <span class="sep">/</span>
-  <span class="bc-link" id="bc-cat" onclick="goCat()"></span>
-  <span class="sep" id="bc-sep2" style="display:none">/</span>
   <span class="current" id="bc-album"></span>
 </div>
 
@@ -228,10 +225,13 @@ footer p { font-size: 11px; color: var(--ink-muted); letter-spacing: 0.05em; }
       <small>攝影集收錄</small>
     </div>
   </div>
-  <div class="cat-section">
+
+  <div class="home-section">
     <hr class="section-rule">
-    <div class="cat-grid" id="cat-grid"></div>
+    <div class="filter-wrap" id="filter-wrap"></div>
+    <div class="album-grid" id="album-grid"></div>
   </div>
+
   <div class="bottom-sections">
     <div class="bottom-section" id="about-section">
       <span class="section-label">關於我</span>
@@ -248,15 +248,6 @@ footer p { font-size: 11px; color: var(--ink-muted); letter-spacing: 0.05em; }
     <p id="footer-name"></p>
     <p>以 GitHub Pages 架設</p>
   </footer>
-</div>
-
-<!-- CATEGORY PAGE -->
-<div class="page has-bc" id="page-cat">
-  <div class="page-header">
-    <h2 id="cat-title"></h2>
-    <div class="meta" id="cat-meta"></div>
-  </div>
-  <div class="album-grid" id="album-grid"></div>
 </div>
 
 <!-- ALBUM PAGE -->
@@ -299,29 +290,31 @@ footer p { font-size: 11px; color: var(--ink-muted); letter-spacing: 0.05em; }
 
 <script src="photos.js"></script>
 <script>
-/* ═══════════════ INIT FROM photos.js ═══════════════ */
 const SITE = window.SITE_CONFIG;
 const DATA = window.PHOTOS_DATA;
 
-// 填入網站資訊
-document.getElementById('site-name').textContent  = SITE.name;
+document.getElementById('site-name').textContent = SITE.name;
 document.title = SITE.name;
-document.getElementById('site-h1').innerHTML      = SITE.heroTitle;
-document.getElementById('site-desc').textContent  = SITE.heroDesc;
+document.getElementById('site-h1').innerHTML = SITE.heroTitle;
+document.getElementById('site-desc').textContent = SITE.heroDesc;
 document.getElementById('footer-name').textContent = '© ' + new Date().getFullYear() + ' ' + SITE.name;
-
-// 關於
 document.getElementById('about-content').innerHTML =
-  `<h3>${SITE.about.heading}</h3>` +
-  SITE.about.paragraphs.map(p => `<p>${p}</p>`).join('');
-
-// 聯繫
+  '<h3>' + SITE.about.heading + '</h3>' +
+  SITE.about.paragraphs.map(p => '<p>' + p + '</p>').join('');
 document.getElementById('contact-rows').innerHTML =
-  SITE.contact.map(c => `<div class="contact-row"><span class="lbl">${c.label}</span>${c.value}</div>`).join('');
+  SITE.contact.map(c => '<div class="contact-row"><span class="lbl">' + c.label + '</span>' + c.value + '</div>').join('');
 
-/* ═══════════════ STATE ═══════════════ */
-let curCat = null, curAlbum = null, lbPhotos = [], lbIdx = 0, curView = 3;
+/* STATE */
+let curAlbum = null, curFilter = 'all', lbPhotos = [], lbIdx = 0, curView = 3;
 const $ = id => document.getElementById(id);
+
+function allAlbums() {
+  return DATA.flatMap(cat => cat.albums.map(a => ({ ...a, catId: cat.id, catName: cat.name })));
+}
+
+function sortPhotos(arr) {
+  return [...arr].sort((a, b) => a.file.localeCompare(b.file, undefined, { numeric: true }));
+}
 
 function showPage(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -329,130 +322,91 @@ function showPage(id) {
   window.scrollTo(0, 0);
 }
 
-function sortPhotos(arr) {
-  return [...arr].sort((a, b) => a.file.localeCompare(b.file, undefined, { numeric: true }));
-}
-
-function getCoverSrc(album) {
-  const sorted = sortPhotos(album.photos);
-  if (album.cover) {
-    const match = sorted.find(p => p.file === album.cover);
-    if (match) return `photos/${curCat ? curCat.id : album._catId}/${album.id}/${match.file}`;
-  }
-  if (!sorted[0]) return '';
-  return `photos/${curCat ? curCat.id : album._catId}/${album.id}/${sorted[0].file}`;
-}
-
-function totalAlbums() { return DATA.reduce((n, c) => n + c.albums.length, 0); }
-
 /* BREADCRUMB */
-function setBreadcrumb(catName, albumName) {
+function setBreadcrumb(albumName) {
   const bc = $('breadcrumb');
-  if (!catName) { bc.classList.add('hidden'); return; }
+  if (!albumName) { bc.classList.add('hidden'); return; }
   bc.classList.remove('hidden');
-  $('bc-cat').textContent = catName;
-  $('bc-sep2').style.display = albumName ? '' : 'none';
-  $('bc-album').textContent = albumName || '';
+  $('bc-album').textContent = albumName;
 }
 
 /* HASH ROUTING */
-function setHash(catId, albumId) {
-  const hash = catId ? (albumId ? '#' + catId + '/' + albumId : '#' + catId) : '#';
-  history.replaceState(null, '', hash);
+function setHash(key) {
+  history.replaceState(null, '', key ? '#' + key : '#');
 }
 
 function readHash() {
   const h = location.hash.replace('#', '');
   if (!h) return;
   const parts = h.split('/');
+  if (parts.length < 2) return;
   const cat = DATA.find(c => c.id === parts[0]);
   if (!cat) return;
-  curCat = cat;
-  curCat.albums.forEach(a => a._catId = curCat.id);
-  if (parts[1]) {
-    const album = cat.albums.find(a => a.id === parts[1]);
-    if (album) { openAlbum(album.id); return; }
-  }
-  openCat(parts[0]);
+  const album = cat.albums.find(a => a.id === parts[1]);
+  if (album) openAlbum({ ...album, catId: cat.id, catName: cat.name });
 }
 
 /* HOME */
 function goHome() {
-  curCat = null; curAlbum = null;
+  curAlbum = null;
   setHash(null);
   setBreadcrumb(null);
-  renderHome();
   showPage('page-home');
 }
 
 function renderHome() {
-  $('home-total').textContent = totalAlbums();
-  const grid = $('cat-grid');
-  grid.innerHTML = '';
-  DATA.forEach((cat, i) => {
-    // tag each album with its cat id for getCoverSrc
-    cat.albums.forEach(a => a._catId = cat.id);
-    const firstAlbum = cat.albums[0];
-    const cover = firstAlbum
-      ? `photos/${cat.id}/${firstAlbum.id}/${firstAlbum.cover || sortPhotos(firstAlbum.photos)[0]?.file || ''}`
-      : '';
-    const el = document.createElement('div');
-    el.className = 'cat-card anim';
-    el.style.animationDelay = (i * 0.09) + 's';
-    el.innerHTML = `
-      <img src="${cover}" alt="${cat.name}" loading="lazy">
-      <div class="cat-card-overlay">
-        <div class="cat-card-name">${cat.name}</div>
-        <div class="cat-card-count">${cat.albums.length} 個攝影集</div>
-      </div>`;
-    el.addEventListener('click', () => openCat(cat.id));
-    grid.appendChild(el);
+  $('home-total').textContent = allAlbums().length;
+  renderFilterBtns();
+  renderAlbumGrid();
+}
+
+function renderFilterBtns() {
+  const fw = $('filter-wrap');
+  fw.innerHTML = '';
+  [{ id: 'all', name: '全部' }, ...DATA.map(c => ({ id: c.id, name: c.name }))].forEach(item => {
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn' + (curFilter === item.id ? ' active' : '');
+    btn.textContent = item.name;
+    btn.addEventListener('click', () => {
+      curFilter = item.id;
+      fw.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderAlbumGrid();
+    });
+    fw.appendChild(btn);
   });
 }
 
-/* CATEGORY */
-function openCat(catId) {
-  curCat = DATA.find(c => c.id === catId);
-  if (!curCat) return;
-  curCat.albums.forEach(a => a._catId = curCat.id);
-  curAlbum = null;
-  setHash(curCat.id);
-  setBreadcrumb(curCat.name, null);
-  $('cat-title').textContent = curCat.name;
-  $('cat-meta').textContent = curCat.albums.length + ' 個攝影集';
+function renderAlbumGrid() {
+  const filtered = allAlbums().filter(a => curFilter === 'all' || a.catId === curFilter);
   const grid = $('album-grid');
   grid.innerHTML = '';
-  curCat.albums.forEach((album, i) => {
-    const cover = `photos/${curCat.id}/${album.id}/${album.cover || sortPhotos(album.photos)[0]?.file || ''}`;
+  filtered.forEach((album, i) => {
+    const cover = 'photos/' + album.catId + '/' + album.id + '/' + (album.cover || sortPhotos(album.photos)[0]?.file || '');
     const el = document.createElement('div');
     el.className = 'album-card anim';
-    el.style.animationDelay = (i * 0.07) + 's';
-    el.innerHTML = `
-      <div class="album-thumb"><img src="${cover}" alt="${album.name}" loading="lazy"></div>
-      <div class="album-info">
-        <div class="album-title">${album.name}</div>
-        <div class="album-sub">${album.date ? album.date + '　' : ''}${album.photos.length} 張</div>
-      </div>`;
-    el.addEventListener('click', () => openAlbum(album.id));
+    el.style.animationDelay = (i * 0.05) + 's';
+    el.innerHTML =
+      '<div class="album-thumb"><img src="' + cover + '" alt="' + album.name + '" loading="lazy"></div>' +
+      '<div class="album-info">' +
+        '<div class="album-title">' + album.name + '</div>' +
+        '<div class="album-sub">' + (album.date ? album.date + '　' : '') + album.photos.length + ' 張</div>' +
+        '<span class="album-tag">' + album.catName + '</span>' +
+      '</div>';
+    el.addEventListener('click', () => openAlbum(album));
     grid.appendChild(el);
   });
-  showPage('page-cat');
 }
 
-function goCat() { if (curCat) openCat(curCat.id); }
-
 /* ALBUM */
-function openAlbum(albumId) {
-  if (!curCat) return;
-  curAlbum = curCat.albums.find(a => a.id === albumId);
-  if (!curAlbum) return;
-  setBreadcrumb(curCat.name, curAlbum.name);
-  setHash(curCat.id, curAlbum.id);
-  $('album-title').textContent = curAlbum.name;
-  $('album-meta').innerHTML = `${curCat.name}<br>${curAlbum.photos.length} 張`;
-  lbPhotos = sortPhotos(curAlbum.photos).map(p => ({
-    ...p,
-    src: `photos/${curCat.id}/${curAlbum.id}/${p.file}`
+function openAlbum(album) {
+  curAlbum = album;
+  setBreadcrumb(album.name);
+  setHash(album.catId + '/' + album.id);
+  $('album-title').textContent = album.name;
+  $('album-meta').innerHTML = album.catName + (album.date ? '　' + album.date : '') + '<br>' + album.photos.length + ' 張';
+  lbPhotos = sortPhotos(album.photos).map(p => ({
+    ...p, src: 'photos/' + album.catId + '/' + album.id + '/' + p.file
   }));
   renderPhotoGrid();
   setView(curView);
@@ -466,13 +420,9 @@ function renderPhotoGrid() {
     const el = document.createElement('div');
     el.className = 'photo-item anim';
     el.style.animationDelay = (i * 0.03) + 's';
-    el.innerHTML = `
-      <img src="${photo.src}" alt="${photo.file}" loading="lazy">
-
-      <div class="photo-caption">
-        <span></span>
-        <span>${i + 1} / ${lbPhotos.length}</span>
-      </div>`;
+    el.innerHTML =
+      '<img src="' + photo.src + '" alt="' + photo.file + '" loading="lazy">' +
+      '<div class="photo-caption"><span></span><span>' + (i + 1) + ' / ' + lbPhotos.length + '</span></div>';
     el.addEventListener('click', () => openLb(i));
     grid.appendChild(el);
   });
@@ -489,21 +439,14 @@ function setView(n) {
 }
 
 /* LIGHTBOX */
-function openLb(idx) {
-  lbIdx = idx; renderLb();
-  $('lightbox').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
+function openLb(idx) { lbIdx = idx; renderLb(); $('lightbox').classList.add('open'); document.body.style.overflow = 'hidden'; }
 function renderLb() {
   const p = lbPhotos[lbIdx];
   $('lb-img').src = p.src;
   $('lb-file').textContent = '';
   $('lb-counter').textContent = (lbIdx + 1) + ' / ' + lbPhotos.length;
 }
-function lbStep(dir) {
-  lbIdx = (lbIdx + dir + lbPhotos.length) % lbPhotos.length;
-  renderLb();
-}
+function lbStep(dir) { lbIdx = (lbIdx + dir + lbPhotos.length) % lbPhotos.length; renderLb(); }
 function closeLb() { $('lightbox').classList.remove('open'); document.body.style.overflow = ''; }
 function lbBgClick(e) { if (e.target === $('lightbox')) closeLb(); }
 document.addEventListener('keydown', e => {
