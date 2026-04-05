@@ -305,6 +305,24 @@ window.PHOTOS_DATA = [
   },
 
   /* ====== 新增分類範例（複製這個區塊）====== */
+  {
+    id:   "Girl's Room",     // 改這裡（英文）
+    name: "房間女孩",           // 改這裡
+
+    albums: [
+      {
+        id:    "yun",
+        name:  "頑固少女",
+        date:  "",
+        cover: "IMG_0001.jpg",
+        photos: [
+          { file: "IMG_0001.jpg" },
+        ]
+      },
+    ]
+  },
+
+  /* ====== 新增分類範例（複製這個區塊）====== */
   /*
   {
     id:   "landscape",     // 改這裡（英文）
