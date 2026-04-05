@@ -43,7 +43,7 @@ window.PHOTOS_DATA = [
 
   /* ====== 分類 1：房間女孩 ====== */
   {
-    id:   "Girl's Room",
+    id:   "girls-room",
     name: "房間女孩",
 
     albums: [
@@ -310,6 +310,18 @@ window.PHOTOS_DATA = [
              { file: "IMG_0038.jpg" },
         ]
       },
+    ]
+  },
+
+
+  /* ====== 分類 3：旅拍 ====== */
+  {
+    id:   "indoor",
+    name: "旅拍",
+
+    albums: [
+
+
     ]
   },
 
