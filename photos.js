@@ -320,10 +320,63 @@ window.PHOTOS_DATA = [
     name: "旅拍",
 
     albums: [
+      /* ── 攝影集：薇思 ── */
+      {
+        id:    "wei-si",
+        name:  "薇思",
+        date:  "",
+        cover: "IMG_0043.jpg",
 
-
-    ]
-  },
+        photos: [
+             { file: "IMG_0001.jpg" },
+             { file: "IMG_0002.jpg" },
+             { file: "IMG_0003.jpg" },
+             { file: "IMG_0004.jpg" },
+             { file: "IMG_0005.jpg" },
+             { file: "IMG_0006.jpg" },
+             { file: "IMG_0007.jpg" },
+             { file: "IMG_0008.jpg" },
+             { file: "IMG_0009.jpg" },
+             { file: "IMG_0010.jpg" },
+             { file: "IMG_0011.jpg" },
+             { file: "IMG_0012.jpg" },
+             { file: "IMG_0013.jpg" },
+             { file: "IMG_0014.jpg" },
+             { file: "IMG_0015.jpg" },
+             { file: "IMG_0016.jpg" },
+             { file: "IMG_0017.jpg" },
+             { file: "IMG_0018.jpg" },
+             { file: "IMG_0019.jpg" },
+             { file: "IMG_0020.jpg" },
+             { file: "IMG_0021.jpg" },
+             { file: "IMG_0022.jpg" },
+             { file: "IMG_0023.jpg" },
+             { file: "IMG_0024.jpg" },
+             { file: "IMG_0025.jpg" },
+             { file: "IMG_0026.jpg" },
+             { file: "IMG_0027.jpg" },
+             { file: "IMG_0028.jpg" },
+             { file: "IMG_0029.jpg" },
+             { file: "IMG_0030.jpg" },
+             { file: "IMG_0031.jpg" },
+             { file: "IMG_0032.jpg" },
+             { file: "IMG_0033.jpg" },
+             { file: "IMG_0034.jpg" },
+             { file: "IMG_0035.jpg" },
+             { file: "IMG_0036.jpg" },
+             { file: "IMG_0037.jpg" },
+             { file: "IMG_0038.jpg" },
+             { file: "IMG_0039.jpg" },
+             { file: "IMG_0040.jpg" },
+             { file: "IMG_0041.jpg" },
+             { file: "IMG_0042.jpg" },
+             { file: "IMG_0043.jpg" },
+             { file: "IMG_0044.jpg" },
+             { file: "IMG_0045.jpg" },
+           ]
+         },
+       ]
+     },
 
 
   /* ====== 新增分類範例（複製這個區塊）====== */
