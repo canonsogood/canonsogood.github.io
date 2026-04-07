@@ -410,6 +410,33 @@ window.PHOTOS_DATA = [
              { file: "IMG_0045.jpg" },
            ]
          },
+
+      /* ── 攝影集：9m ── */
+      {
+        id:    "joanne",
+        name:  "Joanne",
+        date:  "",
+        cover: "IMG_0015.jpg",
+
+        photos: [
+             { file: "IMG_0001.jpg" },
+             { file: "IMG_0002.jpg" },
+             { file: "IMG_0003.jpg" },
+             { file: "IMG_0004.jpg" },
+             { file: "IMG_0005.jpg" },
+             { file: "IMG_0006.jpg" },
+             { file: "IMG_0007.jpg" },
+             { file: "IMG_0008.jpg" },
+             { file: "IMG_0009.jpg" },
+             { file: "IMG_0010.jpg" },
+             { file: "IMG_0011.jpg" },
+             { file: "IMG_0012.jpg" },
+             { file: "IMG_0013.jpg" },
+             { file: "IMG_0014.jpg" },
+             { file: "IMG_0015.jpg" },
+           ]
+         },
+       
        ]
      },
 
