@@ -310,6 +310,41 @@ window.PHOTOS_DATA = [
              { file: "IMG_0038.jpg" },
         ]
       },
+
+/* ── 攝影集：薇薇 ── */
+      {
+        id:    "weiwei",
+        name:  "薇薇",
+        date:  "",
+        cover: "IMG_0008.jpg",
+
+        photos: [
+             { file: "IMG_0001.jpg" },
+             { file: "IMG_0002.jpg" },
+             { file: "IMG_0003.jpg" },
+             { file: "IMG_0004.jpg" },
+             { file: "IMG_0005.jpg" },
+             { file: "IMG_0006.jpg" },
+             { file: "IMG_0007.jpg" },
+             { file: "IMG_0008.jpg" },
+             { file: "IMG_0009.jpg" },
+             { file: "IMG_0010.jpg" },
+             { file: "IMG_0011.jpg" },
+             { file: "IMG_0012.jpg" },
+             { file: "IMG_0013.jpg" },
+             { file: "IMG_0014.jpg" },
+             { file: "IMG_0015.jpg" },
+             { file: "IMG_0016.jpg" },
+             { file: "IMG_0017.jpg" },
+             { file: "IMG_0018.jpg" },
+             { file: "IMG_0019.jpg" },
+             { file: "IMG_0020.jpg" },
+             { file: "IMG_0021.jpg" },
+        ]
+      },
+
+
+       
     ]
   },
 
@@ -375,6 +410,33 @@ window.PHOTOS_DATA = [
              { file: "IMG_0045.jpg" },
            ]
          },
+
+      /* ── 攝影集：9m ── */
+      {
+        id:    "joanne",
+        name:  "Joanne",
+        date:  "",
+        cover: "IMG_0015.jpg",
+
+        photos: [
+             { file: "IMG_0001.jpg" },
+             { file: "IMG_0002.jpg" },
+             { file: "IMG_0003.jpg" },
+             { file: "IMG_0004.jpg" },
+             { file: "IMG_0005.jpg" },
+             { file: "IMG_0006.jpg" },
+             { file: "IMG_0007.jpg" },
+             { file: "IMG_0008.jpg" },
+             { file: "IMG_0009.jpg" },
+             { file: "IMG_0010.jpg" },
+             { file: "IMG_0011.jpg" },
+             { file: "IMG_0012.jpg" },
+             { file: "IMG_0013.jpg" },
+             { file: "IMG_0014.jpg" },
+             { file: "IMG_0015.jpg" },
+           ]
+         },
+       
        ]
      },
 
