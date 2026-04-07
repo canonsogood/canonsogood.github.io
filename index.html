@@ -390,8 +390,6 @@ function renderAlbumGrid() {
       '<div class="album-thumb"><img src="' + cover + '" alt="' + album.name + '" loading="lazy"></div>' +
       '<div class="album-info">' +
         '<div class="album-title">' + album.name + '</div>' +
-        '<div class="album-sub">' + (album.date ? album.date + '　' : '') + album.photos.length + ' 張</div>' +
-        '<span class="album-tag">' + album.catName + '</span>' +
       '</div>';
     el.addEventListener('click', () => openAlbum(album));
     grid.appendChild(el);
