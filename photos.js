@@ -315,13 +315,6 @@ window.PHOTOS_DATA = [
              { file: "IMG_0053.jpg" },
              { file: "IMG_0054.jpg" },
              { file: "IMG_0055.jpg" },
-             { file: "IMG_0056.jpg" },
-             { file: "IMG_0057.jpg" },
-             { file: "IMG_0058.jpg" },
-             { file: "IMG_0059.jpg" },
-             { file: "IMG_0060.jpg" },
-             { file: "IMG_0061.jpg" },
-             { file: "IMG_0062.jpg" },
            ]
          },       
        
